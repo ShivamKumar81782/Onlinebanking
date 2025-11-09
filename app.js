@@ -4,7 +4,8 @@
 
 const demoAccounts = {
   Shivam: { username: 'Shivam', pin: 'Shivam@321', balance: 5000.00, tx: [] },
-  Ritik: { username: 'Ritik', pin: 'Ritik@321', balance: 2500.00, tx: [] }
+  Ritik: { username: 'Ritik', pin: 'Ritik@321', balance: 2500.00, tx: [] },
+  Lavi: { username: 'Lavi', pin: 'Lavi@321', balance: 2500.00, tx: [] }
 };
 
 function saveAccounts(accounts){
@@ -15,7 +16,7 @@ function loadAccounts(){
 }
 function ensureDemo(){
   const acc = loadAccounts();
-  if(!acc.Shivam || !acc.Ritik){
+  if(!acc.Shivam || !acc.Ritik || !acc.Lavi){
     saveAccounts(demoAccounts);
     return demoAccounts;
   }
