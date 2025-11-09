@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Online Banking System - Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Online Banking System (Demo)</h1>
+      <!-- <p class="tag">Client-side demo — no real money. Uses localStorage.</p> -->
+    </header>
+
+    <main id="main">
+      <section id="auth" class="card">
+        <h2>Login</h2>
+        <!-- <p>Use demo accounts: <strong>Shivam / Shivam@321</strong> or <strong>Ritik / Ritik@321</strong></p> -->
+        <label>Username
+          <input id="username" placeholder="user1" />
+        </label>
+        <label>Password
+          <input id="password" type="password" placeholder="1111" />
+        </label>
+        <button id="loginBtn">Login</button>
+        <!-- <button id="createDemoBtn" class="secondary">Create demo accounts</button> -->
+      </section>
+
+      <section id="dashboard" class="card hidden">
+        <div class="dash-header">
+          <h2 id="welcome">Welcome</h2>
+          <div>
+            <button id="logoutBtn" class="danger">Logout</button>
+          </div>
+        </div>
+
+        <div class="balances">
+          <div class="box">
+            <h3>Balance</h3>
+            <p id="balance">₹0.00</p>
+          </div>
+          <div class="box">
+            <h3>Account ID</h3>
+            <p id="accId">-</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <div class="action-card">
+            <h4>Transfer</h4>
+            <label>To (username)
+              <input id="toUser" placeholder="user2" />
+            </label>
+            <label>Amount (₹)
+              <input id="transferAmount" type="number" min="0" step="0.01" />
+            </label>
+            <button id="transferBtn">Send</button>
+          </div>
+
+          <div class="action-card">
+            <h4>Deposit / Withdraw</h4>
+            <label>Amount (₹)
+              <input id="cashAmount" type="number" min="0" step="0.01" />
+            </label>
+            <div class="row">
+              <button id="depositBtn">Deposit</button>
+              <button id="withdrawBtn" class="warning">Withdraw</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="transactions card">
+          <h4>Transaction History</h4>
+          <ul id="txList"></ul>
+          <button id="clearTx" class="secondary">Clear History</button>
+        </section>
+      </section>
+
+      <footer class="foot">
+        <p>This is a demo project for learning purposes only.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
